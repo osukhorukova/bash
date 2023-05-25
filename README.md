@@ -4,8 +4,16 @@ Sometimes we need to work with remote servers that don't have any graphic interf
 
 I am happy to share some bash commands that I used to do tasks during my Quality Assurance studies. 
 
-##### Bash commands flow 
+## Easy navigation
+
+- [Working with files and directories](#task-1)
+- [Changing files, proccesses, URLs](#task-2)
+
+## Task 1
+
+##### Working with files and directories
 ```bash
+~                                     # Home directory 
 pwd                                   # Show current directory path
 mkdir test1                           # Create a directory named test1
 cd test1                              # Go to directory test1 (also possible to write the path to needed directory)
@@ -33,6 +41,36 @@ echo line33 >> file3.txt
 cat file1.txt file3.txt               # Check contents of file1.txt and file3.txt at once
 nano file1.txt + manual replacement   # Using one of the editors, replace all lines in file1.txt and file3.txt
 nano file3.txt + manual replacement 
-
-where ~ is home directory 
+```
+## Task 2
+##### Editing files, checking and killing proccesses, pinging websites
+```bash
+mkdir test3                                   # Create directory test3 
+cd test3                                      # Open directory test3 
+echo -e "row1\nrow2\nrow3\nrow4" > file4.txt  # Add 3 files to test3, each of which should contain 4 lines
+echo -e "row1\nrow2\nrow3\nrow4" > file5.txt  
+echo -e "row1\nrow2\nrow3\nrow4" > file6.txt 
+grep "row2" file5.txt                         # Find the line "row2" in file5.txt 
+grep -R "row" .                               # Find the line "row" in the test3 directory
+grep -c "row" file6.txt                       # Count number of lines containing word "row" in file6.txt
+find . -name "file5.txt"                      # Find file5.txt in test3 directory
+find . -name "file5.txt" -delete              # Using find command delete file5.txt
+echo test > file4.txt                         # Using the echo command, add the word "test" to file4.txt
+sed 's/test/fail/g' file4.txt                 # Change the word "test" in file4.txt to "fail"
+echo test >> file4.txt                        # Add the word "test" to file4.txt so that the content is preserved
+ps aux                                        # View all processes in the system
+kill 666                                      # Kill process 666 in console
+ping artsiomrusau.com                         #Check the availability of the website artsiomrusau.com using ping
+ping -c 5 artsiomrusau.com                    # Send 5 packages to artsiomrusau.com  
+curl https://petstore.swagger.io/v2/pet/      # Using GET and cURL command, get info about registered pets at petstore.swagger.io
+findByStatus?status=registered                
+curl -X POST https://petstore.swagger.io/     # Using POST and cURL command, create a new user at petstore.swagger.io
+v2/user --data "id=1" 
+--data "username=Darrel_Volkman80" 
+--data "firstName=Darrel" 
+--data "lastName=Volkman" 
+--data "email=Darrel_Volkman80@gmail.com" 
+--data "password=g8kq2W1z_utLEBs" 
+--data "phone=7442783865" 
+--data "userStatus=0"
 ```
