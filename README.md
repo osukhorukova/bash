@@ -7,7 +7,7 @@ I am happy to share some bash commands that I used to do tasks during my Quality
 ## Easy navigation
 
 - [Working with files and directories](#task-1)
-- [Changing files, proccesses, URLs](#task-2)
+- [Editing files, checking and killing proccesses, working with websites](#task-2)
 
 ## Task 1
 
