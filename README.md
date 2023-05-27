@@ -60,7 +60,7 @@ sed 's/test/fail/g' file4.txt                 # Change the word "test" in file4.
 echo test >> file4.txt                        # Add the word "test" to file4.txt so that the content is preserved
 ps aux                                        # View all processes in the system
 kill 666                                      # Kill process 666 in console
-ping artsiomrusau.com                         #Check the availability of the website artsiomrusau.com using ping
+ping artsiomrusau.com                         # Check the availability of the website artsiomrusau.com using ping
 ping -c 5 artsiomrusau.com                    # Send 5 packages to artsiomrusau.com  
 curl https://petstore.swagger.io/v2/pet/      # Using GET and cURL command, get info about registered pets at petstore.swagger.io
 findByStatus?status=registered                
